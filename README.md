@@ -1,20 +1,19 @@
-# 📚 Groq Book Categorizer
+# 📚 Goodreads Book Categorizer AI | Groq Llama LLM
 
 ## Overview
 
-Groq Book Categorizer is an intelligent Python tool that automatically categorizes books from a CSV library using advanced AI categorization. Leveraging the Groq API with Llama 3, this script transforms your raw book data into a richly categorized library.
+Goodreads Book Categorizer AI is an intelligent Python tool that automatically categorizes books from a CSV library using advanced AI models. Leveraging the Groq API with Llama 3.1, this script transforms your raw book data into a richly categorized library.
 
 ## 🌟 Features
 
 - **Automatic Book Categorization**: Uses AI to classify books into predefined genres
 - **Encoding Detection**: Handles multiple file encodings automatically
 - **Text Cleaning**: Removes problematic characters from book titles and author names
-- **Flexible Input**: Works with CSV files from various sources like Goodreads
 - **Comprehensive Genre Coverage**: Includes categories for Fiction, Non-Fiction, Science, and more
 
 ## 📦 Prerequisites
 
-- Python 3.8+
+- Python 3.12.4
 - Groq API Key
 - Required Python libraries:
   - pandas
