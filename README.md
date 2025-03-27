@@ -24,7 +24,7 @@ Goodreads Book Categorizer AI is an intelligent Python tool that automatically c
 
 1. Clone the repository:
 ```bash
-https://github.com/SOBANEJAZ/Goodreads-books-Genre-identifier-AI.git
+git clone https://github.com/SOBANEJAZ/Goodreads-books-Genre-identifier-AI.git
 ```
 
 2. Install dependencies:
