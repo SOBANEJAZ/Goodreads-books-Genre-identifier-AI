@@ -1,8 +1,9 @@
 import os
 import csv
-from dotenv import load_dotenv
+import time
 import pandas as pd
 from groq import Groq
+from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
@@ -114,8 +115,9 @@ def categorize_book(title: str, author: str, client) -> str:
     """
 
     try:
+        time.sleep(5)
         response = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.1-8b-instant",
             messages=[
                 {
                     "role": "system",
