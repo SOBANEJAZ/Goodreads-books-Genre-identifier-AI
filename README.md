@@ -25,6 +25,13 @@ Goodreads Book Categorizer AI is an intelligent Python tool that automatically c
 1. Clone the repository:
 ```bash
 git clone https://github.com/SOBANEJAZ/Goodreads-books-Genre-identifier-AI.git
+cd Goodreads-books-Genre-identifier-AI
+```
+
+2. Make Virtual Environment:
+```bash
+python -m venv myenv
+source myenv/Scripts/activate
 ```
 
 2. Install dependencies:
@@ -32,14 +39,14 @@ git clone https://github.com/SOBANEJAZ/Goodreads-books-Genre-identifier-AI.git
 pip install -r requirements.txt
 ```
 
-3. Set up your Groq API key:
+3. rename .env.example to .env and insert the API key:
 ```bash
-export GROQ_API_KEY='your_groq_api_key_here'
+GROQ_API_KEY = "your-api-key"
 ```
 
 ## 💡 Usage
 
-1. Prepare your input CSV with columns: 'Title' and 'Author'
+1. Export the Goodreads library from your Account.
 2. Run the script:
 ```bash
 python main.py
@@ -48,11 +55,36 @@ python main.py
 
 ## 🎯 Categorization Scope
 
-The tool categorizes books into rich, nuanced genres:
-- Fiction (Classics, Sci-Fi, Fantasy, etc.)
-- Non-Fiction (Psychology, Business, Biographies)
-- Science & Knowledge
-- And many more specialized categories
+📚 Books  
+│  
+├── 📖 Fiction  
+│   ├── 🎭 Classics (Shakespeare, Dostoevsky, Orwell, Austen)  
+│   ├── 🔮 Science Fiction (Asimov, Clarke, Bradbury, sci-fi)  
+│   ├── 🏰 Fantasy (Tolkien, Sanderson, Martin, fantasy)  
+│   ├── 🕵️ Mystery & Thriller (Agatha Christie, Dan Brown, thriller, mystery)  
+│   ├── ❤️ Romance (Nicholas Sparks, romance)  
+│   ├── 🧠 Philosophical Fiction (Kafka, Camus, Huxley, existential)  
+│   ├── 🎭 Contemporary & Literary Fiction (Murakami, Sally Rooney)  
+│  
+├── 📚 Non-Fiction  
+│   ├── 🧠 Psychology & Self-Help (Daniel Kahneman, Mark Manson, psychology, self-help)  
+│   ├── 🚀 Business & Productivity (Cal Newport, Peter Thiel, business, productivity)  
+│   ├── 🏆 Biographies & Memoirs (Steve Jobs, Michelle Obama, biography, memoir)  
+│   ├── 🌍 History & Politics (Yuval Noah Harari, Churchill, history, politics)  
+│   ├── 🎨 Philosophy & Thought (Nietzsche, Sartre, Plato, philosophy)  
+│   ├── 💰 Finance & Investing (Benjamin Graham, Morgan Housel, finance, investing)  
+│   ├── 📖 Writing & Creativity (Stephen King, Julia Cameron, writing, creativity)  
+│  
+├── 🔬 Science & Knowledge  
+│   ├── 💻 Computer Science (AI, Programming, Algorithms, Computer Science)  
+│   ├── 🌌 Astronomy & Cosmology (Stephen Hawking, Carl Sagan, cosmology, astronomy)  
+│   ├── 🧬 Biology & Life Sciences (Richard Dawkins, E.O. Wilson, biology, evolution)  
+│   ├── 🏗️ Engineering & Physics (Feynman, Maxwell, engineering, physics)  
+│   ├── 🏥 Medicine & Neuroscience (Oliver Sacks, Robert Sapolsky, medicine, neuroscience)  
+│   ├── 🤖 AI & Game Development (John Carmack, Ian Goodfellow, AI, game development)  
+│   ├── 🏋️ Health & Fitness (David Goggins, Arnold Schwarzenegger, fitness, health)  
+│   ├── 🧘 Religion & Spirituality (Eckhart Tolle, Dalai Lama, religion, spirituality)  
+
 
 ## 🤝 Contributing
 
