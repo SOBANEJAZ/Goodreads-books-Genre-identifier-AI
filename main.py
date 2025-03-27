@@ -61,7 +61,6 @@ def categorize_book(title: str, author: str, client) -> str:
         str: Categorized book genre.
     """
     categories = """
-    Fiction Categories:
     - Classics: Shakespeare, Dostoevsky, Orwell, Austen
     - Science Fiction: Asimov, Clarke, Bradbury, sci-fi
     - Fantasy: Tolkien, Sanderson, Martin, fantasy
@@ -69,25 +68,29 @@ def categorize_book(title: str, author: str, client) -> str:
     - Romance: Nicholas Sparks, romance
     - Philosophical Fiction: Kafka, Camus, Huxley, existential
     - Contemporary & Literary Fiction: Murakami, Sally Rooney
-
-    Non-Fiction Categories:
+    - Historical Fiction: Khaled Hosseini, Marcus Zusak
+    - Horror: Stephen King, Lovecraft
+    - Magical Realism: Gabriel Garcia Marquez, Isabel Allende
+    - LGBTQ+ Fiction: Andre Aciman, Ocean Vuong
+    - Young Adult: John Green, Suzanne Collins
     - Psychology & Self-Help: Daniel Kahneman, Mark Manson, psychology, self-help
     - Business & Productivity: Cal Newport, Peter Thiel, business, productivity
     - Biographies & Memoirs: Steve Jobs, Michelle Obama, biography, memoir
     - History & Politics: Yuval Noah Harari, Churchill, history, politics
     - Philosophy & Thought: Nietzsche, Sartre, Plato, philosophy
     - Finance & Investing: Benjamin Graham, Morgan Housel, finance, investing
-    - Writing & Creativity: Stephen King, Julia Cameron, writing, creativity
-
-    Science & Knowledge Categories:
-    - Computer Science: AI, Programming, Algorithms, Computer Science
+    - True Crime: Truman Capote, Ann Rule, true crime
+    - Travel & Adventure: Bill Bryson, Cheryl Strayed, travel, adventure
+    - Food & Cookbooks: Julia Child, Samin Nosrat, food, cookbooks
+    - Social Justice & Activism: Angela Davis, Bryan Stevenson, Ibram X. Kendi, Naomi Klein activism
+    - Computer Science: AI, Programming, Algorithms, Computer Science, web development
     - Astronomy & Cosmology: Stephen Hawking, Carl Sagan, cosmology, astronomy
     - Biology & Life Sciences: Richard Dawkins, E.O. Wilson, biology, evolution
     - Engineering & Physics: Feynman, Maxwell, engineering, physics
     - Medicine & Neuroscience: Oliver Sacks, Robert Sapolsky, medicine, neuroscience
-    - AI & Game Development: John Carmack, Ian Goodfellow, AI, game development
     - Health & Fitness: David Goggins, Arnold Schwarzenegger, fitness, health
     - Religion & Spirituality: Eckhart Tolle, Dalai Lama, religion, spirituality
+    - Climate & Environment: Bill McKibben, Elizabeth Kolbert, climate, environment
     """
 
     prompt = f"""
@@ -97,6 +100,14 @@ def categorize_book(title: str, author: str, client) -> str:
 
     Available Categories:
     {categories}
+    Examples: 
+    1. "The Book Thief" by Markus Zusak -> Historical Fiction
+    2. "1984" by George Orwell -> Classics
+    3. "Sapiens" by Yuval Noah Harari -> History & Politics
+    4. "The 7 Habits of Highly Effective People" by Stephen Covey -> Psychology & Self-Help
+    5. "The Da Vinci Code" by Dan Brown -> Mystery & Thriller
+    8. "The Selfish Gene" by Richard Dawkins -> Biology & Life Sciences
+
 
     Provide ONLY the most appropriate category name. Be precise and concise. 
     Return just the category name without any additional text or explanation.
@@ -178,7 +189,7 @@ def process_books_csv(input_file: str, output_file: str):
 
 
 def main():
-    input_file = "goodreads_library_exported.csv"  # Replace with your input file path
+    input_file = "goodreads_library_export.csv"  # Replace with your input file path
     output_file = "categorized_books.csv"
     process_books_csv(input_file, output_file)
 
