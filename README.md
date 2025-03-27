@@ -22,36 +22,43 @@ Goodreads Book Categorizer AI is an intelligent Python tool that automatically c
 
 ## 🚀 Installation
 
-1. Clone the repository:
+1.Clone the repository:
+
 ```bash
 git clone https://github.com/SOBANEJAZ/Goodreads-books-Genre-identifier-AI.git
 cd Goodreads-books-Genre-identifier-AI
 ```
 
-2. Make Virtual Environment:
+2.Make Virtual Environment:
+
 ```bash
 python -m venv myenv
 source myenv/Scripts/activate
 ```
 
-2. Install dependencies:
+3.Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-3. rename .env.example to .env and insert the API key:
+4.Rename .env.example to .env and insert the API key:
+
 ```bash
 GROQ_API_KEY = "your-api-key"
 ```
 
 ## 💡 Usage
 
-1. Export the Goodreads library from your Account.
-2. Run the script:
+1.Export the Goodreads library from your Account.
+
+2.Run the script:
+
 ```bash
 python main.py
 ```
-3. Find your categorized books in `categorized_books.csv`
+
+3.Find your categorized books in `categorized_books.csv`
 
 ## 🎯 Categorization Scope
 
@@ -84,7 +91,6 @@ python main.py
 │   ├── 🤖 AI & Game Development (John Carmack, Ian Goodfellow, AI, game development)  
 │   ├── 🏋️ Health & Fitness (David Goggins, Arnold Schwarzenegger, fitness, health)  
 │   ├── 🧘 Religion & Spirituality (Eckhart Tolle, Dalai Lama, religion, spirituality)  
-
 
 ## 🤝 Contributing
 
